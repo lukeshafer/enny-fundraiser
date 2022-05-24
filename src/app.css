@@ -1,6 +1,6 @@
 :root {
 	--primary: hsl(253, 100%, 95%);
-	--secondary: #d7eeff;
+	--secondary: hsl(168, 100%, 99%);
 	--accent: #faffc7;
 	--accent-secondary: #ccf1ff;
 	--tertiary: hsl(335, 100%, 90%);
