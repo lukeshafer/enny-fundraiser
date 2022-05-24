@@ -21,7 +21,7 @@
 </svelte:head>
 
 <main class:activate={activateMain}>
-	<h1>Enny's Wheels</h1>
+	<h1>Enny's Wheels 🧑🏾‍🦽</h1>
 
 	<h2>Help Enny get a wheelchair!</h2>
 
@@ -34,7 +34,7 @@
 	<p>Please consider donating below:</p>
 
 	<ul>
-		<li><a class="btn" href="/" title="GoFundMe?">GoFundMe</a></li>
+		<li><a class="btn" href="/" title="GoFundMe?">GoFundMe or something</a></li>
 	</ul>
 </main>
 
