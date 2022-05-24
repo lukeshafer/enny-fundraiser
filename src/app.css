@@ -15,7 +15,7 @@
 }
 
 body {
-	background: linear-gradient(var(--accent), var(--accent-secondary)) no-repeat left top;
+	background: var(--accent) linear-gradient(var(--accent), var(--accent-secondary)) no-repeat left top;
 	background-size: max(100vw, 100%) max(100vh, 100%);
 	display: flex;
 	justify-content: center;
