@@ -1,0 +1,21 @@
+@media (prefers-reduced-motion: reduce) {
+	@keyframes slide-in {
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	@keyframes slide-in {
+		0% {
+			transform: translateX(-100vw);
+		}
+		60% {
+			transform: translateX(15vh);
+		}
+		70% {
+			transform: translateX(14vh);
+		}
+		100% {
+			transform: translateX(0vh);
+		}
+	}
+}
