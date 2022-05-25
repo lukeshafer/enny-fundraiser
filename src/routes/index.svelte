@@ -33,7 +33,7 @@
 
 	<ul>
 		<li>
-			<a class="btn" href="https://chuffed.org/project/ennys-wheels" title="Donate">Donate!</a>
+			<a class="btn main" href="https://chuffed.org/project/ennys-wheels" title="Donate">Donate!</a>
 		</li>
 	</ul>
 
@@ -56,11 +56,28 @@
 	</p>
 
 	<p>
-		You can donate on Chuffed by clicking the above button, or visiting <a
-			href="https://chuffed.org/project/ennys-wheels"
-			><strong>chuffed.org/project/ennys-wheels</strong></a
-		> directly!
+		You can donate on Chuffed by clicking the above button, or on Venmo or Paypal via the below
+		links, if you prefer. <strong
+			>If you use Venmo, please be sure to include a note that it's for Enny!</strong
+		>
 	</p>
+
+	<ul>
+		<li>
+			<a
+				class="btn"
+				href="https://account.venmo.com/pay?recipients=anahitacreates&note=For%20Enny!"
+				title="AnahitaCreates Venmo">Venmo</a
+			>
+		</li>
+		<li>
+			<a
+				class="btn"
+				href="https://www.paypal.com/donate/?business=XKHZ8DD8P9X5J&no_recurring=1&item_name=To+support+Enny+and+purchase+them+a+wheelchair%21&currency_code=USD"
+				title="AnahitaCreates Paypal">Paypal</a
+			>
+		</li>
+	</ul>
 </main>
 
 <style>

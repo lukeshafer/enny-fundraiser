@@ -85,7 +85,7 @@ strong {
 	font: var(--subheading);
 	font-weight: 700;
 	letter-spacing: 1px;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	background-color: var(--tertiary);
 	text-decoration: none;
 	color: var(--light);
@@ -98,7 +98,16 @@ strong {
 	display: absolute;
 }
 
-a.btn:hover {
+.btn.main {
+	font-size: 1.5em;
+}
+
+.btn:hover {
+	font-size: 1.4em;
+	filter: brightness(120%);
+}
+
+.btn.main:hover {
 	font-size: 1.8em;
 	filter: brightness(120%);
 }
