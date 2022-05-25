@@ -1,17 +1,23 @@
 @media (prefers-reduced-motion: reduce) {
 	@keyframes fade-in {
 	}
+
+	@keyframes slide-in-left {
+	}
+
+	@keyframes slide-in-right {
+	}
 }
 
 @media (prefers-reduced-motion: no-preference) {
 	@keyframes fade-in {
 		0% {
-			transform: translateY(1em);
+			transform: translateY(1em) scaleY(1.1);
 			filter: opacity(0%);
 		}
 
 		80% {
-			transform: translateY(0em);
+			transform: translateY(0em) scaleY(1.1);
 			filter: opacity(80%);
 		}
 
@@ -23,6 +29,7 @@
 	@keyframes slide-in-left {
 		0% {
 			transform: translate(-40vw, 20vw);
+			filter: opacity(0%);
 		}
 		100% {
 		}
@@ -30,7 +37,8 @@
 
 	@keyframes slide-in-right {
 		0% {
-			transform: translate(40vw, 20vw);
+			transform: translate(40vw, 20vw) scaleX(-1);
+			filter: opacity(0%);
 		}
 		100% {
 		}
