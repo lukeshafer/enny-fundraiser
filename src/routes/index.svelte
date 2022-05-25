@@ -27,50 +27,9 @@
 </svelte:head>
 
 <main class:activate={activateMain}>
-	<h1>Enny's Wheels 🧑🏾‍🦽</h1>
-
-	<h2><strong>Help Enny get a wheelchair!</strong></h2>
-
-	<p>
-		Enny is disabled and currently waiting to be put on the transplant list for a new liver,
-		hopefully by July. Enny is also Black, trans, and queer, and with Pride Month coming up, it's
-		important to keep in mind that the first Pride was a riot started by trans people of color.
-		<strong>Please consider donating especially if you're a person with privilege</strong>.
-	</p>
-
-	<p>
-		<strong>Enny loves crocheting, painting, gaming, and many other creative hobbies.</strong>
-		Having a wheelchair will help him get to medical appointments, pick up their medication, check their
-		mail, and get around safely and stress-free. They live in a place with grass and dangerous sidewalks,
-		so
-		<strong>
-			we're hoping to fundraise $2,500 for a motorized wheelchair capable of navigating multiple
-			terrains
-		</strong>.
-	</p>
-
-	<p>
-		You can donate at either of the below links. Please make sure to leave a note to let us know <strong
-			>'It's for Enny!'</strong
-		>
-	</p>
-
-	<ul>
-		<li>
-			<a
-				class="btn"
-				href="https://account.venmo.com/pay?recipients=anahitacreates&note=For%20Enny!"
-				title="AnahitaCreates Venmo">Venmo</a
-			>
-		</li>
-		<li>
-			<a
-				class="btn"
-				href="https://www.paypal.com/donate/?business=XKHZ8DD8P9X5J&no_recurring=1&item_name=To+support+Enny+and+purchase+them+a+wheelchair%21&currency_code=USD"
-				title="AnahitaCreates Paypal">Paypal</a
-			>
-		</li>
-	</ul>
+	<h1>Enny's Wheels</h1>
+	<img id="cloud-left" class="cloud" src="assets/cloud.svg" alt="cloud" />
+	<img id="cloud-right" class="cloud" src="assets/cloud.svg" alt="cloud" />
 </main>
 
 <style>
@@ -83,14 +42,26 @@
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		main.activate {
+		main.activate > h1 {
 			animation: none;
 		}
 	}
 
 	@media (prefers-reduced-motion: no-preference) {
-		main.activate {
-			animation: slide-in 500ms ease-in-out;
+		main.activate > h1 {
+			animation: fade-in 800ms ease-out;
+		}
+
+		main.activate > img.cloud {
+			--delay: 500ms;
+			transition: visibility 0ms var(--delay);
+		}
+		main.activate > img#cloud-left {
+			animation: slide-in-left 800ms ease-out var(--delay);
+		}
+
+		main.activate > img#cloud-right {
+			animation: slide-in-right 800ms ease-out var(--delay);
 		}
 	}
 </style>

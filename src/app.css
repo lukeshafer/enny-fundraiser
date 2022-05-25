@@ -11,42 +11,52 @@
 	--dark-second: hsl(289, 50%, 30%);
 	--strong: var(--secondary);
 
-	--heading: 700 4.5em 'Libre Franklin', sans-serif;
+	/* new color scheme */
+	--heading-outline: #7d82b8;
+	--heading-shadow: #caafe8;
+
+	--heading: 6em 'Anitype', sans-serif;
 	--subheading: 400 2em 'Noticia Text', serif;
 	--body: 400 1em 'Mukta', sans-serif;
 
 	font-size: min(1.2rem, 3vw);
 }
 
+@font-face {
+	font-family: 'Anitype';
+	src: url('fonts/Anitype-Journal/AnitypeJournal-3.otf');
+}
+
 body {
-	background: var(--accent) linear-gradient(var(--accent), var(--accent-secondary)) no-repeat left
-		top;
+	/* background: var(--accent) linear-gradient(var(--accent), var(--accent-secondary)) no-repeat left
+		top; */
+	background: hsl(200, 84%, 88%) url('assets/background.png');
 	background-size: max(100vw, 100%) max(100vh, 100%);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100%;
 	font: var(--body);
+	overflow-x: hidden;
 }
 
 main {
-	background-color: var(--primary);
 	padding: 4em;
 	margin: 3em 2.5em;
-	max-width: 40em;
+	/* max-width: 40em; */
 	text-align: center;
 	color: var(--dark);
-	border-radius: 2em;
-	box-shadow: 0.4em 0.4em 0.5em var(--dark);
 }
 
 h1 {
-	/* background: url(/hot-wheels-vector-logo.svg); */
-	color: var(--secondary);
-	background: linear-gradient(var(--heading-background), var(--heading-background-second));
-	box-shadow: 0 0 0.1em 0.1em var(--heading-background);
+	text-transform: uppercase;
 	border-radius: 0.3em;
-	text-shadow: 0.01em 0.01em 0.08em var(--dark);
+	transform: scaleY(1.1);
+	color: var(--secondary);
+	-webkit-text-fill-color: #ffffff00;
+	-webkit-text-stroke-width: 0.05em;
+	-webkit-text-stroke-color: var(--heading-outline);
+	text-shadow: 0 10px var(--heading-shadow);
 	padding: 0.3em 0.1em;
 	margin: 0 0 0.3em 0;
 	font: var(--heading);
@@ -101,6 +111,22 @@ strong {
 a.btn:hover {
 	font-size: 1.4em;
 	filter: brightness(120%);
+}
+
+.cloud {
+	position: absolute;
+	bottom: 0;
+}
+
+#cloud-left {
+	left: -10vw;
+	/* transform: translateX(40vw); */
+}
+
+#cloud-right {
+	right: -10vw;
+	/* transform: scaleX(-1); */
+	/* transform: translateX(40vw); */
 }
 
 @media (prefers-reduced-motion: reduce) {
