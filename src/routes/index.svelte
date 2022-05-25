@@ -27,7 +27,7 @@
 </svelte:head>
 
 <main class:activate={activateMain}>
-	<h1>Enny's Wheels 🧑🏾‍🦽</h1>
+	<h1>Enny's Wheels</h1>
 
 	<h2><strong>Help Enny get a wheelchair!</strong></h2>
 
