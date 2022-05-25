@@ -53,7 +53,7 @@ h1 {
 }
 
 h2 {
-	margin: 0;
+	margin: 1em;
 	font: var(--subheading);
 }
 
@@ -85,7 +85,7 @@ strong {
 	font: var(--subheading);
 	font-weight: 700;
 	letter-spacing: 1px;
-	font-size: 1.2em;
+	font-size: 1.5em;
 	background-color: var(--tertiary);
 	text-decoration: none;
 	color: var(--light);
@@ -99,7 +99,7 @@ strong {
 }
 
 a.btn:hover {
-	font-size: 1.4em;
+	font-size: 1.8em;
 	filter: brightness(120%);
 }
 
