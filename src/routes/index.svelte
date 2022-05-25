@@ -40,25 +40,29 @@
 	/>
 </svelte:head>
 
+<div id="background-layout" aria-hidden="true">
+	<div id="burst-wrapper">
+		<img id="burst" src="/assets/burst-frame.svg" alt="" />
+	</div>
+	<ul id="chairs">
+		{#each wheelChairs as index}
+			<img
+				id="chair{index}"
+				class="chair"
+				src="assets/wheelchair.svg"
+				width="100"
+				alt=""
+				style:left="{xs[index]}vw"
+				style:top="{ys[index]}vh"
+				style:transform="rotate({random(40) - 10}deg)"
+			/>
+		{/each}
+	</ul>
+</div>
+
 <main class:activate={activateMain}>
 	<h1>Enny's Wheels</h1>
-	<div id="background-layout" aria-hidden="true">
-		<img id="burst" src="/assets/burst-frame.svg" alt="" />
-		<ul id="chairs">
-			{#each wheelChairs as index}
-				<img
-					id="chair{index}"
-					class="chair"
-					src="assets/wheelchair.svg"
-					width="100"
-					alt=""
-					style:left="{xs[index]}vw"
-					style:top="{ys[index]}vh"
-					style:transform="rotate({random(40) - 10}deg)"
-				/>
-			{/each}
-		</ul>
-	</div>
+	<img id="enny" src="assets/enny.png" width="400" alt="Enny" />
 	<img id="cloud-left" class="cloud" src="assets/cloud.svg" alt="cloud" />
 	<img id="cloud-right" class="cloud" src="assets/cloud.svg" alt="cloud" />
 </main>
@@ -86,7 +90,7 @@
 		bottom: 0;
 		top: 0;
 		width: 100%;
-		height: 130%;
+		height: 100vh;
 	}
 
 	.chair {
@@ -94,10 +98,36 @@
 		position: absolute;
 	}
 
-	#burst {
-		position: relative;
+	#burst-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		height: 100vh;
+	}
+
+	#burst {
+		display: block;
+		position: relative;
+		height: 90vh;
 		margin: auto;
+	}
+
+	.cloud {
+		position: absolute;
+		bottom: -4em;
+		--x-position: -14em;
+		width: 33em;
+	}
+
+	#cloud-left {
+		left: var(--x-position);
+		/* transform: translateX(40vw); */
+	}
+
+	#cloud-right {
+		right: var(--x-position);
+		transform: scaleX(-1);
+		/* transform: translateX(40vw); */
 	}
 
 	@media (prefers-reduced-motion: reduce) {
