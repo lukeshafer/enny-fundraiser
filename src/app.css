@@ -5,7 +5,7 @@
 	--secondary: hsl(168, 100%, 99%);
 	--accent: #faffc7;
 	--accent-secondary: #ccf1ff;
-	--tertiary: hsl(335, 100%, 90%);
+	--tertiary: hsl(335, 60%, 80%);
 	--light: hsl(128, 27%, 98%);
 	--dark: hsl(232, 34%, 21%);
 	--dark-second: hsl(289, 50%, 30%);
@@ -82,19 +82,24 @@ strong {
 }
 
 .btn {
+	font: var(--subheading);
+	font-weight: 700;
+	letter-spacing: 1px;
+	font-size: 1.2em;
 	background-color: var(--tertiary);
 	text-decoration: none;
-	color: var(--dark);
+	color: var(--light);
 	padding: 0.2em 0.6em;
 	border-radius: 1em;
 	box-shadow: 0.04em 0.03em 0.1em var(--dark);
+	text-shadow: 0.04em 0.03em 0.1em var(--dark);
 	white-space: nowrap;
 	margin-left: 0;
 	display: absolute;
 }
 
-.btn:hover {
-	font-size: 1.2em;
+a.btn:hover {
+	font-size: 1.4em;
 	filter: brightness(120%);
 }
 
