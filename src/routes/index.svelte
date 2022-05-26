@@ -44,6 +44,7 @@
 <svelte:head>
 	<title>Enny's Wheels!</title>
 	<meta name="description" content="Funding a wheelchair for Enny" />
+	<meta name="theme-color" content="#c7e9fa" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
