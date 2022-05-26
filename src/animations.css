@@ -7,6 +7,9 @@
 
 	@keyframes slide-in-right {
 	}
+
+	@keyframes slide-in-bottom {
+	}
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -31,7 +34,12 @@
 			transform: translate(-40vw, 20vw);
 			filter: opacity(0%);
 		}
+		80% {
+			transform: translate(0);
+			filter: opacity(80%);
+		}
 		100% {
+			filter: opacity(100%);
 		}
 	}
 
@@ -40,7 +48,25 @@
 			transform: translate(40vw, 20vw) scaleX(-1);
 			filter: opacity(0%);
 		}
+		80% {
+			filter: opacity(80%);
+		}
 		100% {
+			filter: opacity(100%);
+		}
+	}
+
+	@keyframes slide-in-bottom {
+		0% {
+			transform: translateY(50vw);
+			filter: opacity(0%);
+		}
+		80% {
+			transform: translate(0);
+			filter: opacity(80%);
+		}
+		100% {
+			filter: opacity(100%);
 		}
 	}
 }
