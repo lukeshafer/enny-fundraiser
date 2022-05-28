@@ -53,6 +53,7 @@ header {
 	grid-template-rows: 6em 1fr;
 	grid-template-columns: 1fr min(40em, 80vw) 1fr;
 	justify-items: center;
+	visibility: hidden;
 }
 
 main {
@@ -64,14 +65,21 @@ main {
 	align-items: center;
 }
 
-footer {
+section#link-section {
 	height: auto;
 	font-size: 1.5em;
 	display: grid;
-	grid-template-rows: 15em 13em;
+	grid-template-rows: 10em 10em;
+	gap: 2em;
 	place-items: center;
-	margin: 2em auto;
+	margin: 0em auto 2em;
 	max-width: min(30em, 90vw);
+}
+
+footer {
+	background: white;
+	padding: 2em;
+	margin-top: 6em;
 }
 
 h1 {
@@ -90,10 +98,11 @@ h1 {
 	margin: 0;
 	z-index: 1;
 	font: var(--heading);
+	opacity: var(--opacity);
 }
 
 h2 {
-	margin: 1em;
+	margin: 0.5em;
 	font: var(--subheading);
 	text-align: center;
 	color: var(--subheading-color);
@@ -102,4 +111,249 @@ h2 {
 p {
 	font-size: 1.6em;
 	max-width: min(30em, 80vw);
+}
+
+header.activate {
+	visibility: visible;
+}
+
+#background-layout,
+#background-layout * {
+	z-index: -1;
+}
+
+.header-wrapper {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+#background-layout {
+	background: url('/assets/background.png');
+	background-size: cover;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+.chair {
+	width: 6em;
+	position: absolute;
+}
+
+#burst-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+#burst {
+	height: 90vh;
+}
+
+#enny {
+	height: calc(100% + 2em);
+	width: calc(100% + 2em);
+	grid-row: 2;
+	grid-column: 2 / 3;
+	object-fit: contain;
+}
+
+.cloud {
+	position: absolute;
+	object-fit: contain;
+	width: 50em;
+}
+
+.cloud-container {
+	position: relative;
+	grid-column: 2;
+	grid-row: 2;
+}
+
+#cloud-left {
+	bottom: -10em;
+	right: -2em;
+}
+
+#cloud-right {
+	bottom: -10em;
+	left: -2em;
+}
+
+strong {
+	--outline: var(--strong);
+	font-weight: 900;
+	color: var(--dark-second);
+	text-shadow: 0 0 5px var(--outline);
+	letter-spacing: 1px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a.zine {
+	color: white;
+	height: 10em;
+	width: 12em;
+	font-size: 1em;
+	background: url('/assets/betterplacezine.webp');
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+a.zine > p {
+	background-color: #00000077;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font: var(--subheading);
+	font-size: 1em;
+	margin: 0;
+	padding: 0.5em;
+}
+
+a.zine:hover {
+	font-size: 1.1em;
+}
+.btn-container {
+	/* grid-column: 1/3; */
+	z-index: 1;
+	/* justify-self: left; */
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+.btn::before {
+	align-self: center;
+	background: #00000000 url('/assets/hand-heart.svg') no-repeat center;
+	background-size: contain;
+	display: block;
+	width: 100%;
+	height: 2em;
+	content: '';
+}
+
+.btn {
+	color: var(--btn-text);
+	background: #00000077;
+	padding: 0.3em;
+	font: var(--subheading);
+	font-size: 2.5em;
+	white-space: nowrap;
+}
+
+.btn:hover {
+	font-size: 2.65em;
+	filter: brightness(120%);
+}
+
+.float-btn {
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+}
+
+.float-btn:hover {
+	font-size: 3.7em;
+	filter: brightness(120%);
+}
+
+.link-container {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+	grid-auto-rows: 4em;
+	place-items: center;
+	gap: 2em;
+	/* justify-content: center;
+	flex-flow: row wrap; */
+}
+
+.alt-payment-link {
+	display: block;
+	height: 2em;
+	width: auto;
+	background: white;
+	padding: 1em;
+}
+
+.alt-payment-link:hover {
+	padding: 1.2em;
+	filter: brightness(120%);
+}
+
+.alt-payment-link > img {
+	height: 2em;
+	width: 8em;
+	object-fit: cover;
+}
+
+h1.scrollToTop:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	header.activate > h1 {
+		animation: none;
+	}
+	header.activate img#cloud-left {
+		animation: none;
+	}
+
+	header.activate img#cloud-right {
+		animation: none;
+	}
+
+	.btn {
+		transition: none;
+	}
+
+	#venmo,
+	#paypal {
+		transition: none;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	header.activate > h1 {
+		animation: fade-in 800ms ease-out;
+	}
+
+	h1 {
+		transition: opacity 300ms;
+	}
+
+	header.activate img.cloud {
+		--delay: 500ms;
+		transition: visibility 800ms var(--delay);
+	}
+	header.activate img#cloud-left {
+		animation: slide-in-left 800ms ease-out var(--delay);
+	}
+
+	header.activate img#cloud-right {
+		animation: slide-in-right 800ms ease-out var(--delay);
+	}
+
+	header.activate img#enny {
+		transition: visibility 800ms 601ms;
+		animation: slide-in-bottom 800ms ease-out 600ms;
+	}
+
+	.btn,
+	.zine {
+		transition: font-size 200ms cubic-bezier(0.57, -1, 0.41, 2);
+	}
+
+	#venmo,
+	#paypal {
+		transition: padding 200ms cubic-bezier(0.57, -1, 0.41, 2);
+	}
 }
