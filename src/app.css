@@ -253,7 +253,7 @@ a.zine:hover {
 	filter: brightness(120%);
 }
 
-.float-btn {
+.float {
 	position: fixed;
 	bottom: 1em;
 	right: 1em;

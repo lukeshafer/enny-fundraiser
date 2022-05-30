@@ -28,6 +28,7 @@
 	let windowHeight: number;
 	let linkSection: HTMLElement;
 	let footerTop = 0;
+	let floatOpacity = 0.3;
 
 	onMount(() => {
 		if (linkSection) footerTop = linkSection.offsetTop;
@@ -106,11 +107,24 @@
 			/>
 		</div>
 		<div class="btn-container">
-			<a
-				class="float-btn btn"
+			<iframe
+				class="float"
+				title="Chuffed Preview"
+				width="100%"
+				height="340"
+				src="https://chuffed.org/iframe/91190/25aae1"
+				frameborder="0"
+				allowfullscreen
+				on:mouseenter={() => (floatOpacity = 1)}
+				on:mouseleave={() => (floatOpacity = 0.3)}
+				style:opacity="min({(footerTop - (y + windowHeight)) / 100}, {floatOpacity})"
+				style="max-width:310px;border:0px solid #fff;margin:0 auto;"
+			/>
+			<!-- <a
+				class="float-btn btn float"
 				href="https://chuffed.org/project/ennys-wheels"
 				style:opacity={(footerTop - (y + windowHeight)) / 100}>Donate!</a
-			>
+			> -->
 		</div>
 	</header>
 </div>
