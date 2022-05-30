@@ -111,7 +111,7 @@
 				class="float"
 				title="Chuffed Preview"
 				width="100%"
-				height="340"
+				height="100%"
 				src="https://chuffed.org/iframe/91190/25aae1"
 				frameborder="0"
 				allowfullscreen

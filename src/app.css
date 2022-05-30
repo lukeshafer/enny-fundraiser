@@ -257,6 +257,8 @@ a.zine:hover {
 	position: fixed;
 	bottom: 1em;
 	right: 1em;
+	width: 10em;
+	height: 14em;
 }
 
 .float-btn:hover {
